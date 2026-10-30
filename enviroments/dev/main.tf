@@ -64,4 +64,9 @@ module "nsg" {
   source     = "../../modules/network_security_group"
   nsg-list   = var.map-nsg
 }
+module "keyvault" {
+  depends_on    = [module.map-rg-lists]
+  source        = "../../modules/key_vault"
+  keyvault-list = var.map-keyvault
+}
 

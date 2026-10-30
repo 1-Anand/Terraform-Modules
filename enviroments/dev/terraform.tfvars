@@ -179,4 +179,14 @@ map-nsg = {
     resource_group_name = "bhushan1"
   }
 }
+map-keyvault = {
+  kv1 = {
+    name                       = "kv-prod-anand-01"
+    location                   = "centralindia"
+    resource_group_name        = "bhushan1"
+    sku_name                   = "standard"
+    soft_delete_retention_days = 7
+    purge_protection_enabled   = false
+  }
+}
 

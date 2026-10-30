@@ -14,4 +14,5 @@ variable "map-bastionhost" {}
 
 variable "virtual_machine" {}
 variable "map-nsg" {}
+variable "map-keyvault" {}
 
