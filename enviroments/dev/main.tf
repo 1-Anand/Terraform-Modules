@@ -74,4 +74,9 @@ module "acr" {
   source     = "../../modules/container_registry"
   acr-list   = var.map-acr
 }
+module "log_analytics" {
+  depends_on         = [module.map-rg-lists]
+  source             = "../../modules/log_analytics_workspace"
+  log-analytics-list = var.map-log-analytics
+}
 

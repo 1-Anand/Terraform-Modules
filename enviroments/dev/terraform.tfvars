@@ -198,4 +198,13 @@ map-acr = {
     admin_enabled       = true
   }
 }
+map-log-analytics = {
+  law1 = {
+    name                = "law-monitoring-prod"
+    location            = "centralindia"
+    resource_group_name = "bhushan1"
+    sku                 = "PerGB2018"
+    retention_in_days   = 30
+  }
+}
 

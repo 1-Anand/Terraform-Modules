@@ -16,4 +16,5 @@ variable "virtual_machine" {}
 variable "map-nsg" {}
 variable "map-keyvault" {}
 variable "map-acr" {}
+variable "map-log-analytics" {}
 
