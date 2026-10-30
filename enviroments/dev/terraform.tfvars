@@ -207,4 +207,15 @@ map-log-analytics = {
     retention_in_days   = 30
   }
 }
+map-aks = {
+  aks1 = {
+    name                = "aks-fleet-cluster-01"
+    location            = "centralindia"
+    resource_group_name = "bhushan1"
+    dns_prefix          = "aksfleet01"
+    node_pool_name      = "systempool"
+    node_count          = 2
+    vm_size             = "Standard_B2s"
+  }
+}
 

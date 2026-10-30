@@ -17,4 +17,5 @@ variable "map-nsg" {}
 variable "map-keyvault" {}
 variable "map-acr" {}
 variable "map-log-analytics" {}
+variable "map-aks" {}
 

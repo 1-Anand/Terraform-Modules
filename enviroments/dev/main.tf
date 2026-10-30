@@ -79,4 +79,9 @@ module "log_analytics" {
   source             = "../../modules/log_analytics_workspace"
   log-analytics-list = var.map-log-analytics
 }
+module "aks" {
+  depends_on = [module.map-rg-lists, module.map-subnet-list]
+  source     = "../../modules/aks_cluster"
+  aks-list   = var.map-aks
+}
 
