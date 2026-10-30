@@ -59,6 +59,9 @@ module "virtualmachine" {
   virtual_machine       = var.virtual_machine
   network_interface_ids = module.nics.network_interface_ids
 }
-
-
+module "nsg" {
+  depends_on = [module.map-rg-lists]
+  source     = "../../modules/network_security_group"
+  nsg-list   = var.map-nsg
+}
 

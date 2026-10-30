@@ -13,3 +13,5 @@ variable "map-pip" {}
 variable "map-bastionhost" {}
 
 variable "virtual_machine" {}
+variable "map-nsg" {}
+

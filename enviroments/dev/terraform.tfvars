@@ -172,3 +172,11 @@ virtual_machine = {
     install_script = "install_pip.sh"
   }
 }
+map-nsg = {
+  nsg1 = {
+    name                = "nsg-app-prod"
+    location            = "centralindia"
+    resource_group_name = "bhushan1"
+  }
+}
+
