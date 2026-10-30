@@ -189,4 +189,13 @@ map-keyvault = {
     purge_protection_enabled   = false
   }
 }
+map-acr = {
+  acr1 = {
+    name                = "acrananddevops01"
+    resource_group_name = "bhushan1"
+    location            = "centralindia"
+    sku                 = "Standard"
+    admin_enabled       = true
+  }
+}
 

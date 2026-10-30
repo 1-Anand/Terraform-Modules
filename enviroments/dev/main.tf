@@ -69,4 +69,9 @@ module "keyvault" {
   source        = "../../modules/key_vault"
   keyvault-list = var.map-keyvault
 }
+module "acr" {
+  depends_on = [module.map-rg-lists]
+  source     = "../../modules/container_registry"
+  acr-list   = var.map-acr
+}
 
