@@ -15,7 +15,3 @@ resource "azurerm_kubernetes_cluster" "aks" {
     type = "SystemAssigned"
   }
 }
-
-output "aks_ids" {
-  value = { for key, aks in azurerm_kubernetes_cluster.aks : key => aks.id }
-}

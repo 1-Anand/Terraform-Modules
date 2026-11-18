@@ -10,7 +10,3 @@ resource "azurerm_key_vault" "kv" {
   soft_delete_retention_days = lookup(each.value, "soft_delete_retention_days", 7)
   purge_protection_enabled   = lookup(each.value, "purge_protection_enabled", false)
 }
-
-output "key_vault_ids" {
-  value = { for key, kv in azurerm_key_vault.kv : key => kv.id }
-}
