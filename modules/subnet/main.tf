@@ -7,8 +7,3 @@ resource "azurerm_subnet" "subnet" {
   resource_group_name  = each.value.resource_group_name
   address_prefixes     = each.value.address_prefixes
 }
-
-output "subnet_ids" {
-  value = { for key, subnet in azurerm_subnet.subnet : key => subnet.id }
-}
-

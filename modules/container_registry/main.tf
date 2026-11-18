@@ -6,7 +6,3 @@ resource "azurerm_container_registry" "acr" {
   sku                 = each.value.sku
   admin_enabled       = lookup(each.value, "admin_enabled", true)
 }
-
-output "acr_ids" {
-  value = { for key, acr in azurerm_container_registry.acr : key => acr.id }
-}

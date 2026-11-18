@@ -6,7 +6,3 @@ resource "azurerm_log_analytics_workspace" "law" {
   sku                 = lookup(each.value, "sku", "PerGB2018")
   retention_in_days   = lookup(each.value, "retention_in_days", 30)
 }
-
-output "log_analytics_ids" {
-  value = { for key, law in azurerm_log_analytics_workspace.law : key => law.id }
-}

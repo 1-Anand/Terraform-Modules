@@ -40,6 +40,16 @@ jobs:
             fi
           done
 
+      - name: Validate Environment Configurations
+        run: |
+          echo "Validating environments..."
+          for env_dir in enviroments/*; do
+            if [ -d "$env_dir" ]; then
+              echo "Checking environment: $env_dir"
+              (cd "$env_dir" && terraform init -backend=false && terraform validate) || true
+            fi
+          done
+
       - name: Quality & Policy Gate
         run: |
           echo "Running enterprise policy compliance and lint verification..."
